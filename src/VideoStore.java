@@ -45,7 +45,11 @@ public class VideoStore {
 		cust = new GuestCustomer("Nguyen Xuan Phuc", "12 Politics Street", "G003", "0311112222");
 		myStore.addCustomer(cust);
 		cust.borrowVid(myStore.getVideo("VD003"));
-
+		
+		//Add super VIP customer
+		SuperVIP myVIP = SuperVIP.getInstance("Nguyen Kim Ngan Hong", "72 Nguyen Van Linh", "G112", "010101",01010101);
+		myStore.addCustomer(myVIP);
+		myVIP.borrowVid(myStore.getVideo("VD003"));
 	}
 
 }
