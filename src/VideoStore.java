@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class VideoStore {
 	private CustomerList customerList;
@@ -50,6 +51,15 @@ public class VideoStore {
 		SuperVIP myVIP = SuperVIP.getInstance("Nguyen Kim Ngan Hong", "72 Nguyen Van Linh", "G112", "010101",01010101);
 		myStore.addCustomer(myVIP);
 		myVIP.borrowVid(myStore.getVideo("VD003"));
+		
+		//Factory
+		ArrayList<Customer> list = new ArrayList();
+		System.out.println("Enter a customer type:");
+		Scanner myScanner = new Scanner(System.in);
+		//Create a new person
+		String option = myScanner.next();
+		Customer e = Customer.createCustomer(option,"Pham Nhat Vuong", "12 Money Road", "G002", "0399999999",1);
+		list.add(e);
 	}
 
 }
